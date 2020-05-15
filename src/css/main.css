@@ -3,7 +3,70 @@ body {
     overflow: auto;
     font-family: 宋体;
     font-size: 12px;
-    background-color: #000;
+    background: url(../assets/img/bg.png) no-repeat;
+    background-size: cover;
+    background-color: black;
     color: #eee;
-  }
-  
+
+}
+
+html {
+  cursor:url(../assets/img/cursor.png),default;
+  cursor:url(../assets/img/cursor.png),auto;
+}
+
+
+
+/* DNF Scrollbar */
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 23px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+::-webkit-scrollbar-button:end:increment {
+  background-image: url(../assets/scrollbar/down_default.png);
+}
+
+::-webkit-scrollbar-button:end:increment:hover {
+  background-image: url(../assets/scrollbar/down_hover.png);
+}
+
+::-webkit-scrollbar-button:end:increment:active {
+  background-image: url(../assets/scrollbar/down_click.png);
+}
+
+
+::-webkit-scrollbar-button:start:decrement {
+    background-image: url(../assets/scrollbar/up_default.png);
+}
+
+::-webkit-scrollbar-button:start:decrement:hover {
+  background-image: url(../assets/scrollbar/up_hover.png);
+}
+
+::-webkit-scrollbar-button:start:decrement:active {
+  background-image: url(../assets/scrollbar/up_click.png);
+}
+
+::-webkit-scrollbar-thumb {
+  height:23px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: url(../assets/scrollbar/scrollbar_default.png);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-image: url(../assets/scrollbar/scrollbar_hover.png);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-image: url(../assets/scrollbar/scrollbar_hover.png);
+}
