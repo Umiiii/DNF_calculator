@@ -60,13 +60,16 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-image: url(../assets/scrollbar/scrollbar_default.png);
+  background: url(../assets/scrollbar/scrollbar_default.png);
+  background-size: cover;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-image: url(../assets/scrollbar/scrollbar_hover.png);
+  background: url(../assets/scrollbar/scrollbar_hover.png);
+  background-size: cover;
 }
 
 ::-webkit-scrollbar-thumb:active {
-  background-image: url(../assets/scrollbar/scrollbar_hover.png);
+  background: url(../assets/scrollbar/scrollbar_hover.png);
+  background-size: cover;
 }

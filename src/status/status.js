@@ -11,6 +11,7 @@ class Status extends Component {
                   <FormattedMessage id="app.status.status"/>
                 </div>
               </div>
+              
               <div className="status-panel status-equipment-panel">
 
               </div>
@@ -99,6 +100,7 @@ class Status extends Component {
                   </span>
                   </div>
                 </div>
+
                 <div className="status-stats-row">
                   <div className="status-stats-cell">
 
@@ -134,6 +136,7 @@ class Status extends Component {
                   </span>
                   </div>
                 </div>
+
                 <div className="status-stats-row">
                   <div className="status-stats-cell">
                     <span>
@@ -223,8 +226,6 @@ class Status extends Component {
                   </div>
                 </div>
 
-
-
                 <div className="status-stats-row">
 
                  <div className="status-stats-cell">
@@ -247,8 +248,6 @@ class Status extends Component {
                  </span>
                  </div>
                 </div>
-
-
 
                 <div className="status-stats-row">
                   <div className="status-stats-cell">
@@ -355,15 +354,6 @@ class Status extends Component {
                 </span>
                 </div>
                 </div>
-
-
-
-
-
-
-
-
-
 
               </div>
               <div className="status-panel status-bottom-panel">
