@@ -1,0 +1,45 @@
+.status{
+    background-color: black;
+    width: 300px;
+    font-family: 宋体;
+    font-size: 12px;
+}
+
+.status-panel{
+    width: 300px;
+    opacity: 0.8;
+}
+
+
+.status-row {
+    width: 125px;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.status-icon {
+    width: 12px;
+    height: 12px;
+}
+
+.status-name {
+    padding-left: 5px;
+    color: white;
+}
+
+.status-value {
+    color: greenyellow;
+}
+
+.status-value:before{
+    position: relative;
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAADCAYAAABbNsX4AAAAHUlEQVQImWNggAKvRWH/YWxGdIFtcasYGZEFYAAAF80IhYL1MRMAAAAASUVORK5CYII=) ;
+    top: -2px;
+}
+
+
+.status-icon-hp {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAAdklEQVQokb3QsRWAIAwE0MOtKN3HjlXYxykyz1koeSEEtJICHpf85oC/T3J/TmZDvtmhAGDJkH6ZLXO5IrJkkiRLptwLQ9ZyhdXgtiBBVh+YDAQA7ItCzuc9fAErbBGANLQaYY/0WuEIzWCHI/R2tMGvoMOzwQVNAVNv4erFyQAAAABJRU5ErkJggg==);
+}
