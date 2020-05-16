@@ -1,14 +1,49 @@
 import React from 'react';
 import Status from './status/status';
+import StatusValue from "./status/statusvalue";
 import "./css/main.css"
 import "./css/status.css";
 import "./css/status_icon.css"
 
-function App() {
-  return (
-    <Status />
-  );
+import { IntlProvider } from "react-intl";
+import intl_en from "./translations/en.json";
+import intl_cn from "./translations/zh-CN.json";
+import intl_ja from "./translations/ja-JP.json";
+import intl_kr from "./translations/ko-kr.json";
+
+const status = {
+  'en': intl_en,
+  'cn': intl_cn,
+  'ja': intl_ja,
+  'kr': intl_kr
 }
+
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+        locale: 'cn',
+        messages: status.cn,
+        mockstats: new StatusValue()
+    }
+  }
+
+  onChangeLanguage = (evt) => {
+    const lang = evt.target.value
+    this.setState({ locale: lang, messages: status[lang] || intl_cn });
+  }
+
+  render() {
+    const { locale, messages, mockstats } = this.state
+    return (
+      <IntlProvider locale={locale} messages={messages}>
+        <Status status={mockstats} changeLanguage={this.onChangeLanguage}/>
+      </IntlProvider>
+    )
+  }
+}
+
+
 
 export default App;
 

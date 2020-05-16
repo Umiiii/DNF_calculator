@@ -1,7 +1,7 @@
 .status{
     background:rgb(0,0,0,0.8);
     width: 425px;
-    height: 620px;
+    height: 720px;
     font-family: 宋体;
     font-size: 12px;
 
@@ -54,7 +54,7 @@
     overflow-x: hidden;
     position: relative;
     width: 400px;
-    height: 250px;
+    height: 330px;
     top: 5px;
     left: 12px;
 
@@ -88,6 +88,7 @@
 .status-stats-icon {
     width: 18px;
     height: 18px;
+    background-color: rgb(0,0,0,0);
 }
 
 .status-stats-name {
@@ -115,9 +116,32 @@
 .status-bottom-panel {
     position: relative;
     width: 400px;
-    height: 90px;
+    height: 110px;
     left: 12px;
     top: 8px;
+}
+
+.status-select {
+    width: 100px;
+    position: relative;
+}
 
 
+/* .status-bottm-panel-language-selection {
+    color: #8b7431;
+}
+.status-bottm-panel-language-selection:hover, .status-bottm-panel-language-selection:active{
+    color: #BFAA41
+} */
+
+.status-bottm-panel-language-selection-select {
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background:url(../assets/dropdown/dropdown_default.png);
+    -webkit-appearance: none;
 }
