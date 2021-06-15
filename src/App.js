@@ -5,12 +5,13 @@ import "./css/main.css"
 import "./css/status.css";
 import "./css/status_icon.css"
 
+
 import { IntlProvider } from "react-intl";
 import intl_en from "./translations/en.json";
 import intl_cn from "./translations/zh-CN.json";
 import intl_ja from "./translations/ja-JP.json";
 import intl_kr from "./translations/ko-kr.json";
-
+import Draggable from 'react-draggable';
 const status = {
   'en': intl_en,
   'cn': intl_cn,
@@ -32,13 +33,28 @@ class App extends React.Component {
     const lang = evt.target.value
     this.setState({ locale: lang, messages: status[lang] || intl_cn });
   }
-
+  onStart(e) {
+    console.log("hey")
+    let elems = document.getElementsByClassName('react-draggable');
+    for (let i = 0; i < elems.length; i++) {
+      elems[i].style.zIndex = 1;
+      console.log(i)
+      e.currentTarget.style.zIndex = 2;
+    }
+  }
   render() {
     const { locale, messages, mockstats } = this.state
     return (
       <IntlProvider locale={locale} messages={messages}>
-        <Status status={mockstats} changeLanguage={this.onChangeLanguage}/>
+        <Draggable onStart={this.onStart.bind(this)} handle=".status-titlebar">
+          <div style={{position: `relative`, maxWidth: `425px`}}><Status status={mockstats} changeLanguage={this.onChangeLanguage} /></div>
+        </Draggable>
+
+        <Draggable onStart={this.onStart.bind(this)} handle=".status-titlebar">
+          <div style={{ position: `relative`, maxWidth: `425px`}}><Status status={mockstats} changeLanguage={this.onChangeLanguage} /></div>
+        </Draggable>
       </IntlProvider>
+
     )
   }
 }

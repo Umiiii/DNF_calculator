@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
-import dict from '../translations/en.json'
+import Draggable from 'react-draggable';
 import "./status.js";
 
 class Status extends Component {
@@ -40,6 +40,7 @@ class StatusEquipmentPanel extends Component {
 class StatusStatsPanel extends Component {
   render() {
     return (
+      <Draggable>
       <div className="status-panel status-stats-panel">
  
         <div className="status-stats-row">
@@ -382,6 +383,7 @@ class StatusStatsPanel extends Component {
         </div>
 
       </div>
+      </Draggable>
     );
   }
 }
