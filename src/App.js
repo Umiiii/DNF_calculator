@@ -1,7 +1,9 @@
 import React from 'react';
 import Status from './status/status';
 import StatusValue from "./status/statusvalue";
+import Toolkit from "./debug/toolkit";
 import "./css/main.css"
+import "./css/common.css";
 import "./css/status.css";
 import "./css/status_icon.css"
 
@@ -47,11 +49,15 @@ class App extends React.Component {
     return (
       <IntlProvider locale={locale} messages={messages}>
         <Draggable onStart={this.onStart.bind(this)} handle=".status-titlebar">
-          <div style={{position: `relative`, maxWidth: `425px`}}><Status status={mockstats} changeLanguage={this.onChangeLanguage} /></div>
+          <div style={{position: `relative`, maxWidth: `425px`}}><Status status={mockstats} /></div>
         </Draggable>
 
         <Draggable onStart={this.onStart.bind(this)} handle=".status-titlebar">
-          <div style={{ position: `relative`, maxWidth: `425px`}}><Status status={mockstats} changeLanguage={this.onChangeLanguage} /></div>
+          <div style={{ position: `relative`, maxWidth: `425px`}}><Status status={mockstats} /></div>
+        </Draggable>
+
+        <Draggable onStart={this.onStart.bind(this)} defaultPosition={{ x: 500, y: -500 }}>
+          <div style={{ position: `relative`, maxWidth: `425px` }}><Toolkit changeLanguage={this.onChangeLanguage} /></div>
         </Draggable>
       </IntlProvider>
 

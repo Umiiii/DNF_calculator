@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
-import Draggable from 'react-draggable';
+
 import "./status.js";
 
 class Status extends Component {
@@ -11,7 +11,7 @@ class Status extends Component {
             <StatusTitleBar />
             <StatusEquipmentPanel />
             <StatusStatsPanel status={this.props.status}/>
-            <StatusBottomPanel langChange={this.props.changeLanguage}/>
+            
           </div>
         );
     }
@@ -40,7 +40,6 @@ class StatusEquipmentPanel extends Component {
 class StatusStatsPanel extends Component {
   render() {
     return (
-      <Draggable>
       <div className="status-panel status-stats-panel">
  
         <div className="status-stats-row">
@@ -383,27 +382,26 @@ class StatusStatsPanel extends Component {
         </div>
 
       </div>
-      </Draggable>
     );
   }
 }
 
 
-const StatusBottomPanel = injectIntl((props) => {
-  const { intl, langChange } = props
-  return (
-    <div className="status-panel status-bottom-panel">
-      <div className="status-select">
-        <select value={intl.locale} onChange={langChange}>
-          <option value="cn">中文</option>
-          <option value="en">English</option>
-          <option value="ja">日本語</option>
-          <option value="kr">한국어</option>
-        </select>
-      </div>
-    </div>
-  );
-})
+// const StatusBottomPanel = injectIntl((props) => {
+//   const { intl, langChange } = props
+//   return (
+//     <div className="status-panel status-bottom-panel">
+//       <div className="status-select">
+//         <select value={intl.locale} onChange={langChange}>
+//           <option value="cn">中文</option>
+//           <option value="en">English</option>
+//           <option value="ja">日本語</option>
+//           <option value="kr">한국어</option>
+//         </select>
+//       </div>
+//     </div>
+//   );
+// })
 
 
 export default Status;
